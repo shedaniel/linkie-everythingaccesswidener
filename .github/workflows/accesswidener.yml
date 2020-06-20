@@ -12,8 +12,8 @@ jobs:
         with:
           java-version: 1.8
       - name: Build Jar
-        run: ./gradlew clean accesswidener:build
+        run: ./gradlew clean build
       - name: Run Jar
-        run: java -jar accesswidener/build/libs/accesswidener-1.0-SNAPSHOT.jar
+        run: java -jar build/libs/accesswidener-1.0-SNAPSHOT.jar
         env:
           repo-token: ${{ secrets.ACCESS_WIDENER }}
